@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>AdminLTE 3W</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -174,11 +174,11 @@
                with font-awesome or any other icon font library -->
           
           
-          <li class="nav-header">MISCELLANEOUS</li>
+          <li class="nav-header">Daftar Menu</li>
           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+            <a href="/pertanyaan" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
+              <p>Pertanyaan</p>
             </a>
           </li>
         </ul>
