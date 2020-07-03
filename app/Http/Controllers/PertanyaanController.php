@@ -24,4 +24,25 @@ class PertanyaanController extends Controller
     	$pertanyaan = \App\Pertanyaan::create($req->all());
     	return redirect('/pertanyaan');
     }
+
+    public function edit(Request $req, $id)
+    {
+        $pertanyaan = \App\Pertanyaan::find($id);
+        //dd($siswa); daydam buat ngecek saja.
+        return view('pertanyaan.edit',['pertanyaan'=>$pertanyaan]);
+    }
+
+    public function update (Request $req, $id)
+    {
+        $pertanyaan = \App\Pertanyaan::find($id);
+        $pertanyaan->update($req->all());
+        return redirect('/pertanyaan');
+    }
+
+    public function delete($id)
+    {
+        $pertanyaan = \App\Pertanyaan::find($id);
+        $pertanyaan->delete($pertanyaan);
+        return redirect('/pertanyaan');
+    }
 }

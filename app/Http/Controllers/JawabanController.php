@@ -25,4 +25,25 @@ class JawabanController extends Controller
     	// $jawaban = \App\Jawaban::create($request->all());
     	return redirect('/pertanyaan');
     }
+
+    public function edit(Request $req, $id)
+    {
+        $jawaban = \App\Jawaban::find($id);
+        //dd($siswa); daydam buat ngecek saja.
+        return view('jawaban.edit',['jawaban'=>$jawaban]);
+    }
+
+    public function update (Request $req, $id)
+    {
+        $jawaban = \App\Jawaban::find($id);
+        $jawaban->update($req->all());
+        return redirect('/pertanyaan');
+    }
+
+    public function delete($id)
+    {
+        $jawaban = \App\Jawaban::find($id);
+        $jawaban->delete($jawaban);
+        return redirect('/pertanyaan');
+    }
 }

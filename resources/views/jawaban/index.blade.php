@@ -36,6 +36,8 @@
                     <th style="width: 10px">ID</th>
                     <!-- <th style="width: 10px">ID_P</th> -->
                     <th>Jawaban</th>
+
+                    <th style="width: 18%;">Aksi</th>
                     <!-- <th style="width: 40px">Aksi</th> -->
                   </tr>
                 </thead>
@@ -46,6 +48,10 @@
                     <!-- <td>{{ $j -> pertanyaan_id }}</td> -->
                     <td>{{ $j -> isi }}</td>
                     <!-- <td><a href="/jawaban/{{$j -> id}}" class="btn btn-warning btn-sm">Jawab</a></td> -->
+                    <td>
+                      <a href="/jawaban/{{$j->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+                      <a href="/jawaban/{{$j-> id}}/delete" class="btn btn-danger btn-sm">Hapus</a>
+                    </td>
                   </tr>
                   @endforeach
                 </tbody>

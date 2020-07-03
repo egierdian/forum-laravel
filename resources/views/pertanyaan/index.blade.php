@@ -35,8 +35,8 @@
             <tr>
               <th style="width: 10px">ID</th>
               <th>Isi</th>
-              <th>Tanggal</th>
-              <th style="width: 40px">Aksi</th>
+              <th style="width: 17%;">Tanggal</th>
+              <th style="width: 23%;">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +45,12 @@
               <td>{{ $p -> id }}</td>
               <td>{{ $p -> isi }}</td>
               <td>{{ $p -> tanggal }}</td>
-              <td><a href="/jawaban/{{$p -> id}}" class="btn btn-warning btn-sm">Jawab</a></td>
+              <td>
+                <a href="/pertanyaan/{{$p -> id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/pertanyaan/{{$p -> id}}/delete" class="btn btn-danger btn-sm">Hapus</a>
+                <a href="/jawaban/{{$p -> id}}" class="btn btn-primary btn-sm">Lihat Jawaban</a>
+
+              </td>
             </tr>
             @endforeach
           </tbody>

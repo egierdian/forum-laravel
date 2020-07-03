@@ -24,3 +24,10 @@ Route::get('/pertanyaan/create','PertanyaanController@create');
 Route::post('/pertanyaan','PertanyaanController@store');
 Route::get('/jawaban/{id}','JawabanController@index');
 Route::post('/jawaban/{id}','JawabanController@store');
+Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
+Route::post('/pertanyaan/{id}/update','PertanyaanController@update');
+Route::get('/pertanyaan/{id}/delete','PertanyaanController@delete');
+
+Route::get('/jawaban/{id}/edit','JawabanController@edit');
+Route::post('/jawaban/{id}/update','JawabanController@update');
+Route::get('/jawaban/{id}/delete','JawabanController@delete');
